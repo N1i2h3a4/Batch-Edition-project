@@ -136,6 +136,7 @@ end_of_data_pipeline = DummyOperator(task_id="end_of_data_pipeline", dag=dag)
 
 (
     extract_user_purchase_data
+
     >> user_purchase_to_stage_data_lake
     >> user_purchase_stage_data_lake_to_stage_tbl
 )
